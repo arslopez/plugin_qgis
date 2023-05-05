@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/lat_long" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
