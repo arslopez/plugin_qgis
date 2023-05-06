@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>577</width>
-    <height>306</height>
+    <width>655</width>
+    <height>294</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,8 +36,8 @@
     <rect>
      <x>70</x>
      <y>100</y>
-     <width>42</width>
-     <height>22</height>
+     <width>51</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="suffix">
@@ -50,10 +50,10 @@
   <widget class="QSpinBox" name="spMin">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>140</x>
      <y>100</y>
-     <width>42</width>
-     <height>22</height>
+     <width>51</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="suffix">
@@ -65,8 +65,8 @@
     <rect>
      <x>210</x>
      <y>100</y>
-     <width>62</width>
-     <height>22</height>
+     <width>81</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="prefix">
@@ -81,8 +81,8 @@
     <rect>
      <x>450</x>
      <y>100</y>
-     <width>62</width>
-     <height>22</height>
+     <width>151</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="suffix">
@@ -223,25 +223,12 @@
     <rect>
      <x>450</x>
      <y>190</y>
-     <width>62</width>
-     <height>22</height>
+     <width>141</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="suffix">
     <string> DD</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnCalc">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>250</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Calcular</string>
    </property>
   </widget>
  </widget>

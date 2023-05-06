@@ -26,6 +26,7 @@ import os
 
 from qgis.PyQt import uic
 from qgis.PyQt import QtWidgets
+from math import modf  #Vamos a utilizar la libreria de python math
 
 # This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
@@ -47,20 +48,33 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
         self.spGra.valueChanged.connect(self.latDMSaDD)
         self.spMin.valueChanged.connect(self.latDMSaDD)
         self.cmb1.currentTextChanged.connect(self.latDMSaDD)
+        self.spDD.valueChanged.connect(self.latDDaDMS)
 
     def latDMSaDD(self):
         grados=self.spGra.value()
         minutos=self.spMin.value()
+        segundos=self.spSeg.value()
 
         latH = self.cmb1.currentText()
-        dDD =float(grados) + Minutos/60
+        dDD =float(grados) + minutos/60 + segundos/3600
 
         if latH == "S":
-            dDD= dDD * -1 
+            dDD = dDD * -1 
         
         self.spRes1.setValue(dDD)
 
-        
+    
+    def latDDaDMS(self):
+        gDMS = self.spDD.value()
+        dato=modf(gDMS)
+        grados=dato[1]
+        x=dato[0]
+        dato=modf(x)
+        minutos=dato[1]
+        segundos=dato[0]*60
+        resultado=[grados, minutos, segundos]
+        self.txtLatDMS.setValue(resultado +'°'+ resultado[1]+'´'+resultado[2]+'"')
+
 
 
 
