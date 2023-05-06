@@ -43,9 +43,22 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
 
+        #Disparadores para el resultado
+        self.spGra.valueChanged.connect(self.latDMSaDD)
+        self.spMin.valueChanged.connect(self.latDMSaDD)
+        self.cmb1.currentTextChanged.connect(self.latDMSaDD)
+
     def latDMSaDD(self):
         grados=self.spGra.value()
-        dDD =float(grados)
+        minutos=self.spMin.value()
+
+        latH = self.cmb1.currentText()
+        dDD =float(grados) + Minutos/60
+
+        if latH == "S":
+            dDD= dDD * -1 
+        
+        self.spRes1.setValue(dDD)
 
         
 
