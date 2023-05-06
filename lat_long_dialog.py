@@ -63,7 +63,19 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
         
         self.spRes1.setValue(dDD)
 
-    
+    def lonDMSaDD(self)
+        grados=self.spGraLon.value()
+        minutos=self.spMinLon.value()
+        segundos=self.spSegLon.value()
+
+        lonH = self.cmb2.currentText()
+        dMS =float(grados) + minutos/60 + segundos/3600
+
+        if lonH == "O":
+            dMS = dMS * -1 
+        
+        self.spResLon.setValue(dMS)
+
     def latDDaDMS(self):
         gDMS = self.spDD.value()
         dato=modf(gDMS)
@@ -73,7 +85,7 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
         minutos=dato[1]
         segundos=dato[0]*60
         resultado=[grados, minutos, segundos]
-        self.txtLatDMS.setValue(resultado +'°'+ resultado[1]+'´'+resultado[2]+'"')
+        self.txtLatDMS.setValue(resultado +'° '+ resultado[1]+'´ '+resultado[2]+' " ')
 
 
 
