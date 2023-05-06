@@ -7,17 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>655</width>
-    <height>294</height>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Latitud_Longitud</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <widget class="QLabel" name="label1">
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>20</y>
+     <y>0</y>
      <width>231</width>
      <height>41</height>
     </rect>
@@ -122,13 +125,13 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>70</y>
-     <width>47</width>
-     <height>13</height>
+     <y>50</y>
+     <width>221</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>LATITUD</string>
+    <string>LATITUD GRADOS D,M,S A A DECIMALES</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -136,21 +139,21 @@
     <rect>
      <x>70</x>
      <y>150</y>
-     <width>71</width>
-     <height>16</height>
+     <width>221</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>LONGITUD</string>
+    <string>LONGITUD GRADOS D, M, S, A DECIMALES</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spGra_2">
+  <widget class="QSpinBox" name="spGraLon">
    <property name="geometry">
     <rect>
      <x>70</x>
      <y>190</y>
-     <width>42</width>
-     <height>22</height>
+     <width>51</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="suffix">
@@ -160,26 +163,26 @@
     <string/>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spMin_2">
+  <widget class="QSpinBox" name="spMinLon">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>150</x>
      <y>190</y>
-     <width>42</width>
-     <height>22</height>
+     <width>41</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="suffix">
     <string> M</string>
    </property>
   </widget>
-  <widget class="QDoubleSpinBox" name="spSeg_2">
+  <widget class="QDoubleSpinBox" name="spSegLon">
    <property name="geometry">
     <rect>
      <x>210</x>
      <y>190</y>
-     <width>62</width>
-     <height>22</height>
+     <width>71</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="prefix">
@@ -189,10 +192,10 @@
     <string> S</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="cmb1_2">
+  <widget class="QComboBox" name="cmb2">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>330</x>
      <y>190</y>
      <width>69</width>
      <height>22</height>
@@ -218,17 +221,89 @@
     </property>
    </item>
   </widget>
-  <widget class="QDoubleSpinBox" name="spRes1_2">
+  <widget class="QDoubleSpinBox" name="spDD">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>190</y>
+     <x>70</x>
+     <y>280</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="suffix">
     <string> DD</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtLatDMS">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>280</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>240</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LATITUD DECIMALES A D,M,S</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>330</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LONGITUD DECIMALES A D,M,S</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="spResLon">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>190</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="suffix">
+    <string> DD</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="spDD_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>380</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="suffix">
+    <string> DD</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtLonDMS">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>380</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
    </property>
   </widget>
  </widget>
