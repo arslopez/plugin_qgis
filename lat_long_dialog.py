@@ -47,9 +47,19 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
         #Disparadores para el resultado
         self.spGra.valueChanged.connect(self.latDMSaDD)
         self.spMin.valueChanged.connect(self.latDMSaDD)
+        self.spSeg.valueChanged.connect(self.latDMSaDD)
         self.cmb1.currentTextChanged.connect(self.latDMSaDD)
+        
+        self.spGraLon.valueChanged.connect(self.lonDMSaDD)
+        self.spMinLon.valueChanged.connect(self.lonDMSaDD)
+        self.spSegLon.valueChanged.connect(self.lonDMSaDD)
+        self.cmb2.currentTextChanged.connect(self.lonDMSaDD)
+        
+        
         self.spDD.valueChanged.connect(self.latDDaDMS)
 
+
+    #Latitud Grados minutos y segundos a Decimales
     def latDMSaDD(self):
         grados=self.spGra.value()
         minutos=self.spMin.value()
@@ -63,6 +73,7 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
         
         self.spRes1.setValue(dDD)
 
+    #Longitud Grados minutos y segundos a Decimales
     def lonDMSaDD(self)
         grados=self.spGraLon.value()
         minutos=self.spMinLon.value()
@@ -75,7 +86,7 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
             dMS = dMS * -1 
         
         self.spResLon.setValue(dMS)
-
+    #Latitud Decimales a Grados minutos y segundos
     def latDDaDMS(self):
         gDMS = self.spDD.value()
         dato=modf(gDMS)
@@ -88,5 +99,15 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
         self.txtLatDMS.setValue(resultado +'° '+ resultado[1]+'´ '+resultado[2]+' " ')
 
 
-
+    #Longitud Decimales a Grados minutos y segundos
+    def lonDDaDMS(self):
+        gDMS = self.spDD_2.value()
+        dato=modf(gDMS)
+        grados=dato[1]
+        x=dato[0]
+        dato=modf(x)
+        minutos=dato[1]
+        segundos=dato[0]*60
+        resultado=[grados, minutos, segundos]
+        self.txtLonDMS.setValue(resultado +'° '+ resultado[1]+'´ '+resultado[2]+' " ')
 
