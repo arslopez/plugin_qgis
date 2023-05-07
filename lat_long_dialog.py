@@ -57,6 +57,7 @@ class CalculadoraDialog(QtWidgets.QDialog, FORM_CLASS):
         
         
         self.spDD.valueChanged.connect(self.latDDaDMS)
+        self.spDD_2.valueChanged.connect(self.lonDDaDMS)
 
 
     #Latitud Grados minutos y segundos a Decimales
